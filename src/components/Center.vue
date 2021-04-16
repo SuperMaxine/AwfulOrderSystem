@@ -15,7 +15,7 @@
 import HelloWorld from "./HelloWorld.vue";
 
 export default {
-  name: "center",
+  name: "Center",
   components: {
     HelloWorld,
   },

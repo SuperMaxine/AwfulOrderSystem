@@ -1,7 +1,5 @@
 <template>
-  <el-container>
-    <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
-      <el-menu :default-openeds="['1', '3']">
+    <el-menu :default-openeds="['1', '3']">
         <el-submenu index="1">
           <template #title><i class="el-icon-message"></i>导航一</template>
           <el-menu-item-group>
@@ -48,25 +46,10 @@
           </el-submenu>
         </el-submenu>
       </el-menu>
-    </el-aside>
-
-    <el-container>
-      <el-header><test-c /></el-header>
-      <el-main><center /></el-main>
-    </el-container>
-  </el-container>
 </template>
 
 <script>
-import TestC from "./components/test-c.vue";
-import center from "./components/center.vue";
-
 export default {
-  name: "App",
-  components: {
-    TestC,
-    center,
-  },
+  name: "NavBar",
 };
 </script>
-

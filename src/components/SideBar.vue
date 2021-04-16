@@ -27,7 +27,7 @@
 
 <script>
 export default {
-  name: "test-c",
+  name: "SideBar",
   data() {
     return {
       activeIndex: "1",
