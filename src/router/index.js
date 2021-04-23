@@ -13,15 +13,15 @@ const routes = [
         component: () => import('../components/MyHome.vue'),
         children: [
           {
-            path: 'news',
+            path: 'News',
             component: () => import('../components/Center.vue')
           },
           {
-            path: 'agenda',
+            path: 'Agenda',
             component: () => import('../components/Center.vue')
           },
           {
-            path: 'more',
+            path: 'More',
             component: () => import('../components/Center.vue')
           }
         ]
@@ -32,15 +32,15 @@ const routes = [
         component: () => import('../components/MyLearning.vue'),
         children: [
           {
-            path: 'library',
+            path: 'Library',
             component: () => import('../components/Center.vue')
           },
           {
-            path: 'booking',
+            path: 'Booking',
             component: () => import('../components/Center.vue')
           },
           {
-            path: 'more',
+            path: 'More',
             component: () => import('../components/Center.vue')
           }
         ]

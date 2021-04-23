@@ -7,11 +7,11 @@
     @close="handleClose"
     router
   >
-    <el-menu-item index="1" route="/MyHome/news">
+    <el-menu-item index="1" route="/MyHome/News">
       <i class="el-icon-menu"></i>
       <template #title>My Home</template>
     </el-menu-item>
-    <el-menu-item index="2" route="/MyLearning/library">
+    <el-menu-item index="2" route="/MyLearning/Library">
       <i class="el-icon-setting"></i>
       <template #title>My Learning</template>
     </el-menu-item>
