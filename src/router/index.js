@@ -8,7 +8,7 @@ const routes = [
     component: Home,
     children: [
       {
-        path: '/1',
+        path: 'MyHome',
         name: 'MyHome',
         component: () => import('../components/MyHome.vue'),
         children: [
@@ -27,7 +27,7 @@ const routes = [
         ]
       },
       {
-        path: '/2',
+        path: 'MyLearning',
         name: 'MyLearning',
         component: () => import('../components/MyLearning.vue'),
         children: [
