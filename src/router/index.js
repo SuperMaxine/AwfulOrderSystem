@@ -22,7 +22,7 @@ const routes = [
           },
           {
             path: 'More',
-            component: () => import('../components/Center.vue')
+            component: () => import('../components/HelloWorld.vue')
           }
         ]
       },
@@ -37,7 +37,7 @@ const routes = [
           },
           {
             path: 'Booking',
-            component: () => import('../components/Center.vue')
+            component: () => import('../components/Booking.vue')
           },
           {
             path: 'More',
