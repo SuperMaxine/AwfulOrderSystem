@@ -39,6 +39,15 @@ export default {
         }
     this.$nextTick(function () {
       // 仅在渲染整个视图之后运行的代码
+      axios
+        .post('http://127.0.0.1:5000/start')
+        .then(function (response) {
+            console.log(response);
+          })
+        .catch(function (error) { // 请求失败处理
+            console.log(error);
+        });
+
       document.getElementById('app').onclick = function (e) {
         // var e = e ? e : window.event;
         var tar = e.srcElement || e.target;
