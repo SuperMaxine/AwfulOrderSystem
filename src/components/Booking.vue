@@ -5,37 +5,37 @@
     <el-step title="Select Room"></el-step>
   </el-steps>
 
-  <div v-bind:style="div1Style">
+  <div v-bind:style="div1Style" class="Blank">
     <h1>Select Space</h1>
     Ut facilisis ante in dui ac suscipit, turpis voluptatum donec, suspendisse,
     quasi luctus amet urna tempor amet sit.
     <br /><br />
-    <div align="center">
-      <el-radio v-model="place" label="1" border>Main Library</el-radio>
-      <el-radio v-model="place" label="2" border>Library 1</el-radio>
-      <el-radio v-model="place" label="3" border>Library 2</el-radio>
+    <div align="center" class="Choose Library">
+      <el-radio class="Choose Library" v-model="place" label="1" border>Main Library</el-radio>
+      <el-radio class="Choose Library" v-model="place" label="2" border>Library 1</el-radio>
+      <el-radio class="Choose Library" v-model="place" label="3" border>Library 2</el-radio>
     </div>
-    <div align="right" style="margin-right: 50px">
-      <el-button type="primary" v-on:click="nextStep"
-        >下一步<i class="el-icon-right el-icon--right"></i
-      ></el-button>
+    <div align="right" style="margin-right: 50px" class="Next">
+      <el-button type="primary" v-on:click="nextStep">
+        下一步<i class="el-icon-right el-icon--right"></i>
+      </el-button>
     </div>
   </div>
 
-  <div v-bind:style="div2Style">
+  <div v-bind:style="div2Style" class="Blank">
     <h1>Select Date</h1>
     Ut facilisis ante in dui ac suscipit, turpis voluptatum donec, suspendisse,
     quasi luctus amet urna tempor amet sit.
     <el-calendar v-model="date"></el-calendar>
     <br />{{ date }}
-    <div align="right" style="margin-right: 50px">
+    <div align="right" style="margin-right: 50px" class="Next">
       <el-button type="primary" v-on:click="nextStep"
         >下一步<i class="el-icon-right el-icon--right"></i
       ></el-button>
     </div>
   </div>
 
-  <div v-bind:style="div3Style">
+  <div v-bind:style="div3Style" class="Blank">
     <h1>Select Room</h1>
     <el-table
       :data="tableData"
@@ -58,8 +58,8 @@
     </div>
   </div>
 
-  <div v-bind:style="div4Style" align="center" style="margin-top: 100px">
-    <img src="https://i.loli.net/2021/04/25/dPw3ITCUSeYnKiZ.png" />
+  <div v-bind:style="div4Style" align="center" style="margin-top: 100px" class="Blank">
+    <img src="https://i.loli.net/2021/04/25/dPw3ITCUSeYnKiZ.png" class="Img"/>
   </div>
 </template>
 
