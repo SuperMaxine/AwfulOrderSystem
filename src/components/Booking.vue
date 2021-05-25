@@ -10,10 +10,31 @@
     Ut facilisis ante in dui ac suscipit, turpis voluptatum donec, suspendisse,
     quasi luctus amet urna tempor amet sit.
     <br /><br />
-    <div align="center" class="Choose Library">
-      <el-radio class="Choose Library" v-model="place" label="1" border>Main Library</el-radio>
-      <el-radio class="Choose Library" v-model="place" label="2" border>Library 1</el-radio>
-      <el-radio class="Choose Library" v-model="place" label="3" border>Library 2</el-radio>
+    <div align="center" class="Choose Library1">
+      <el-radio
+        class="Choose Library"
+        id="fuck"
+        v-model="place"
+        label="1"
+        border
+        >Main Library</el-radio
+      >
+      <el-radio
+        class="Choose Library"
+        id="fuck"
+        v-model="place"
+        label="2"
+        border
+        >Library 1</el-radio
+      >
+      <el-radio
+        class="Choose Library"
+        id="fuck"
+        v-model="place"
+        label="3"
+        border
+        >Library 2</el-radio
+      >
     </div>
     <div align="right" style="margin-right: 50px" class="Next">
       <el-button type="primary" v-on:click="nextStep">
@@ -53,13 +74,18 @@
     </el-table>
     <div align="right" style="margin-right: 50px">
       <el-button type="primary" v-on:click="nextStep"
-        >下一步<i class="el-icon-right el-icon--right"></i
+        ><span class="NextStep">下一步</span><i class="el-icon-right el-icon--right"></i
       ></el-button>
     </div>
   </div>
 
-  <div v-bind:style="div4Style" align="center" style="margin-top: 100px" class="Blank">
-    <img src="https://i.loli.net/2021/04/25/dPw3ITCUSeYnKiZ.png" class="Img"/>
+  <div
+    v-bind:style="div4Style"
+    align="center"
+    style="margin-top: 100px"
+    class="Blank"
+  >
+    <img src="https://i.loli.net/2021/04/25/dPw3ITCUSeYnKiZ.png" class="Img" />
   </div>
 </template>
 
@@ -128,6 +154,25 @@ export default {
       ],
     };
   },
+  mounted() {
+      this.$nextTick(function () {
+        // 给radio按钮加上合适的className
+        var tmp1 = document.getElementsByClassName("el-radio__label");
+        var tmp2 = document.getElementsByClassName("el-radio__inner");
+        var tmp3 = document.getElementsByClassName("el-radio");
+        for(var i = 0; i < tmp1.length; i++){
+            tmp1[i].className = tmp1[i].className + " " + tmp1[i].innerHTML;
+            tmp2[i].className = tmp2[i].className + " " + tmp2[i].innerHTML;
+            tmp3[i].className = tmp3[i].className + " " + tmp3[i].innerHTML;
+        }
+
+        var form = document.getElementsByTagName("span")
+        for(i = 0; i < form.length; i++){
+          console.log(form[i]);
+          form[i].className = form[i].className + " " + form[i].innerHTML.split(/[\s\n]/)[1];
+        }
+      });
+    },
   methods: {
     nextStep: function () {
       // `this` 在方法里指向当前 Vue 实例
@@ -164,7 +209,6 @@ export default {
       console.log(row);
       console.log(column);
       console.log(column.property);
-
     },
     cellStyle: function ({ rowIndex, columnIndex }) {
       if (rowIndex === 1 && columnIndex === 2) {
