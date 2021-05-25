@@ -56,6 +56,7 @@ export default {
         var tarClass = tar.className;
         // var tarClass = $(tar).attr(‘class’);
         var tarId = tar.id;
+        console.log ( 'screen: ' + event.screenX + ',' + event.screenY );
         // var tarId = $(tar).attr(‘id’);
         if (tarClass == "el-radio__original") {
           // console.log("ffffffffffffffffffffffuck");
